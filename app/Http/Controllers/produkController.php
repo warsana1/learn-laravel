@@ -8,4 +8,8 @@ public function index()
 $produk = "Aqua 1lt";
 return view("index", compact('produk'));
 }
+public function show(){
+$produk = ["Aqua 1Lt", "Beer", "Ayam Geprek", "Buku Motivasi", "React"];
+return view("produk/show", compact('produk'));
+}
 }

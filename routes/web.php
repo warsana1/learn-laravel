@@ -40,3 +40,4 @@ Route::get('/hello', function () {
 });
 
 Route::get('/produk', [ProdukController::class, 'index'])->name('produk');
+Route::get('/produk/show', [ProdukController::class, 'show'])->name('produk.show');
