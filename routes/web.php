@@ -41,3 +41,9 @@ Route::get('/hello', function () {
 
 Route::get('/produk', [ProdukController::class, 'index'])->name('produk');
 Route::get('/produk/show', [ProdukController::class, 'show'])->name('produk.show');
+
+Route::get('/halaman',function(){
+$title = 'Harry Pooter';
+$content = 'harry potter and the deathly hallows: part 2';
+return view('content.halaman',compact('title','content'));
+});
