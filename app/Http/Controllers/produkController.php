@@ -5,6 +5,7 @@ class produkController extends Controller
 {
 public function index()
 {
-return "Mengakses fungsi di Controller menggunakan route";
+$produk = "Aqua 1lt";
+return view("index", compact('produk'));
 }
 }
