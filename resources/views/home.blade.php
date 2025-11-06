@@ -10,6 +10,9 @@
             background: #f2f2f2;
             margin: 0;
             padding: 0;
+            background-image: url("code-image.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
         }
         nav {
             background-color: #333;
@@ -24,14 +27,26 @@
         nav a.active {
             text-decoration: underline;
         }
-        .container {
-            padding: 10px;
-        }
+        
         .content {
             background: white;
-            padding: 20px;
-            border-radius: 5px;
-        }
+            padding: 10px;
+    }
+    .services {
+        display: inline-block;
+        padding: 10px;
+        background-color: #28a745;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+   @media (max-width: 768px) {
+        
+          body {
+    background-image: none;
+  }
+ 
+    }
         
     </style>
 </head>
@@ -44,8 +59,11 @@
         <a href="{{ route('services') }}" class="{{ request()->routeIs('services') ? 'active' : '' }}">Services</a>
     </nav>
     <div class="content">
-    <h1>Ini About</h1>
+    <h1>The homepage of the web</h1>
+    <h3>Hi! this is website for learning coding</h3>
 
+<a class="services" href="{{ route('services') }}" class="{{ request()->routeIs('services') ? 'active' : '' }}">Get started</a>
+    
     </div>
 </div>
 

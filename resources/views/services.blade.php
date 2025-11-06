@@ -29,9 +29,29 @@
         }
         .content {
             background: white;
-            padding: 20px;
-            border-radius: 5px;
-        }
+            padding: 10px;
+
+    }
+    .code {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+
+    }
+    .services {
+        display: inline-block;
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    @media (max-width: 768px) {
+    .code {
+        flex-direction: column;
+        align-items: center;    
+    }
+}
         
     </style>
 </head>
@@ -44,10 +64,16 @@
         <a href="{{ route('services') }}" class="{{ request()->routeIs('services') ? 'active' : '' }}">Services</a>
     </nav>
     <div class="content">
-    <h1>Ini About</h1>
-
+    <h1>What we offers</h1>
     </div>
 </div>
-
+<div>
+    <div class="code">
+        <a href="#" class="services">Web Development</a>
+        <a href="#" class="services">Mobile App Development</a>
+        <a href="#" class="services">Digital Marketing</a>
+        <a href="#" class="services">SEO Services</a>
+    </div>
+</div>
 </body>
 </html>
