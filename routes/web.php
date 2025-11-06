@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProdukController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,3 +38,5 @@ Route::get('/me', function () {
 Route::get('/hello', function () {
     return 'Hello, World!';
 });
+
+Route::get('/produk', [ProdukController::class, 'index'])->name('produk');
