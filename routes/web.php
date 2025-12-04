@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\StudentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,3 +48,5 @@ $title = 'Harry Pooter';
 $content = 'harry potter and the deathly hallows: part 2';
 return view('content.halaman',compact('title','content'));
 });
+
+Route::get('/students', [StudentController::class, 'index']);
