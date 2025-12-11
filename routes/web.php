@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\SwalayanController;
+use App\Http\Controllers\TransactionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,3 +52,7 @@ return view('content.halaman',compact('title','content'));
 });
 
 Route::get('/students', [StudentController::class, 'index']);
+
+Route::get('/barang', [SwalayanController::class, 'barang']);
+Route::get('/kasir', [SwalayanController::class, 'kasir']);
+Route::get('/barang/update-tampil', [SwalayanController::class, 'barang']);
